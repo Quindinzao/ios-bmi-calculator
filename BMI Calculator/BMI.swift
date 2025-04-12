@@ -2,25 +2,20 @@
 //  BMI.swift
 //  BMI Calculator
 //
-//  Created by João Victor Fernandes on 01/04/25.
+//  Created by João Victor Fernandes on 11/04/25.
 //  Copyright © 2025 Angela Yu. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct BMI {
-    var height: Double?
-    var weight: Double?
+    let value: Float
+    let advice: String
+    let color: UIColor
     
-    init(height: Double?, weight: Double?) {
-        self.height = height
-        self.weight = weight
-    }
-    
-    func calculateBMI() -> Double? {
-        guard let height = height, let weight = weight, height > 0 else {
-            return nil
-        }
-        return weight / pow(height, 2)
+    init(value: Float, advice: String, color: UIColor) {
+        self.value = value
+        self.advice = advice
+        self.color = color
     }
 }
